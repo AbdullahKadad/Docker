@@ -25,13 +25,13 @@ SECRET_KEY = 'django-insecure--)^hy&ibre^hj&gs^cxb5)i$6i)s7xqoy(ew0160%oiz9k+2q5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    # defaults apps
+    # default apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -121,7 +121,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+
+# Directory where static files will be collected
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+# Directory where static files from apps (like 'store') are located
+STATICFILES_DIRS = [
+    BASE_DIR / 'store' / 'static',
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
