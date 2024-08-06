@@ -31,7 +31,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-    # default apps
+    # defaults apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -122,11 +122,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = '/static/'
-
-# Directory where static files will be collected
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
-# Directory where static files from apps (like 'store') are located
 STATICFILES_DIRS = [
     BASE_DIR / 'store' / 'static',
 ]
